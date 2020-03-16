@@ -1,9 +1,9 @@
 const Styles = require("@material-ui/core/styles");
-const NewStyles = require("@material-ui/styles");
+// const NewStyles = require("@material-ui/styles");
 
 exports.withStyles = function() {
   return function(styleFunc) {
-    return NewStyles.withStyles(styleFunc, { withTheme: true });
+    return Styles.withStyles(styleFunc, { withTheme: true });
   };
 };
 
@@ -24,4 +24,4 @@ exports.createMuiTheme = function(t) {
 };
 
 exports.muiThemeProviderClass = Styles.MuiThemeProvider;
-exports.themeProviderClass = NewStyles.ThemeProvider;
+// exports.themeProviderClass = NewStyles.ThemeProvider;
