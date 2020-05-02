@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "pulp browserify -I test -m Test.Main --to dist/bundle.js",
-    "watch": "pulp -w browserify -I test -m Test.Main --to dist/bundle.js"
+    "build": "spago bundle-app -m Test.Main --to dist/bundle.js --then 'browserify dist/bundle.js -o dist/bundle.js'",
+    "watch": "spago bundle-app -w -m Test.Main --to dist/bundle.js --then 'browserify dist/bundle.js -o dist/bundle.js'"
   },
   "license": "MIT",
   "dependencies": {
