@@ -17,7 +17,7 @@ type ActionTypes = {
 
 type Theme =
   { spacing ::
-    { unit :: Int
+    { unit :: Number
     }
   , breakpoints ::
     { up :: String -> String
