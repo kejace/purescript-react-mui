@@ -45,6 +45,7 @@ type Theme =
       }
     , divider :: String
     , action :: ActionTypes
+    , getContrastText :: String -> String
     }
   , typography ::
     { fontFamily :: String
