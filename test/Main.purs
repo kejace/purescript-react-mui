@@ -3,7 +3,7 @@ module Test.Main where
 import Prelude
 
 import Data.Maybe (fromJust)
-import Debug.Trace (traceM)
+import Debug (traceM)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import MaterialUI.AppBar (appBar)

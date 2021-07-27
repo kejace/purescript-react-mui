@@ -4,15 +4,19 @@ You can edit this file as you like.
 -}
 { name = "react-mui"
 , dependencies =
-  [ "console"
-  , "debug"
+  [ "debug"
+  , "effect"
+  , "maybe"
+  , "partial"
+  , "prelude"
   , "psci-support"
-  , "react-dom"
-  , "typelevel-prelude"
-  , "web-html"
-  , "web-dom"
   , "react"
+  , "react-dom"
   , "tscompat"
+  , "typelevel-prelude"
+  , "unsafe-coerce"
+  , "web-dom"
+  , "web-html"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]

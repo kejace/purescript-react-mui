@@ -2,15 +2,15 @@ module MaterialUI.Styles where
 
 import MaterialUI.Theme (Theme)
 import React (ReactClass, ReactElement, unsafeCreateElement)
-import Type.RowList (class ListToRow, class RowToList, Cons, Nil, kind RowList)
+import Type.RowList (class ListToRow, class RowToList, Cons, Nil, RowList)
 import Unsafe.Coerce (unsafeCoerce)
 
-class NamedStyles (classesDef :: # Type) (classes :: # Type)
+class NamedStyles (classesDef :: Row Type) (classes :: Row Type)
 
 instance convertStyleTypes :: (RowToList classesDef inputList, ToClassName inputList outputList,
   ListToRow outputList classes) => NamedStyles classesDef classes
 
-class ToClassName (input :: RowList) (output :: RowList) | input -> output
+class ToClassName (input :: RowList Type) (output :: RowList Type) | input -> output
 instance toClassNameNil :: ToClassName Nil Nil
 instance toClassNameCons :: (ToClassName tail tailOut) => ToClassName (Cons s t tail) (Cons s String tailOut)
 
